@@ -1,0 +1,422 @@
+/* FULL PAGE SETTINGS */
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+}
+
+h2, a {
+    color: white;
+}
+
+/* GRID LAYOUT FOR THE FULL PAGE ******************************************************************** */
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    background: black;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 10% 35% 10% 15% 30%;
+    grid-column-gap: 5px;
+    background-color: rgb(41, 41, 41);
+    max-height: 9.8vh;
+}
+
+.fmn-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    height: 3vh;
+    margin-top: 0.3%;
+    background-color: rgb(41, 41, 41);
+}
+
+.bottom-container {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-column-gap: 5px;
+    margin-top: 0.3%;
+}
+
+.left-panel-container {
+    display: grid;
+    grid-template-rows: 10% 10% 20% 10% 50%;
+    grid-row-gap: 5px;
+    background-color: rgb(41, 41, 41);
+}
+
+.right-side-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0.1%;
+}
+
+.modules-notes-class {
+    display: grid;
+    grid-template-rows: 5% 85%;
+}
+
+/* STYLING FOR EACH CONTAINER ********************************************************************************* */
+
+/* HEADER ****************************************************************** */
+
+/* LOGO */
+
+#logo {
+    display: block;
+    width: 10vw;
+    padding: 2%;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    padding: 0.5%;
+}
+
+.buttons button:nth-last-child(2n) {
+    margin-left: auto;
+  }
+
+.buttons button {
+    margin: 0.2%;
+    font-size: 100%;
+    width: 9.5%;
+    height: 95%;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+#reset-button:hover {
+    background: yellow;
+    color: black;
+    cursor: pointer;
+    font-size: 115%;
+}
+
+#set-color-button:hover {
+    background: lawngreen;
+    cursor: pointer;
+    color: black;
+    font-size: 115%;
+}
+
+#remove-color-button:hover {
+    background: red;
+    cursor: pointer;
+    color: black;
+    font-size: 115%;
+}
+
+/* #set-clock-button, #start-clock-button {
+    -ms-flex-item-align: end;
+} */
+
+#set-clock-button:hover {
+    background: aqua;
+    cursor: pointer;
+    color: black;
+    font-size: 115%;
+}
+
+#start-clock-button:hover {
+    background: lawngreen;
+    cursor: pointer;
+    color: black;
+    font-size: 115%;
+}
+
+#notes-add-button:hover {
+    background: lawngreen;
+    cursor: pointer;
+    color: black;
+    font-size: 115%;
+}
+
+#notes-remove-button:hover {
+    background: red;
+    cursor: pointer;
+    color: black;
+    font-size: 115%;
+}
+
+/* CLOCK */
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+}
+
+#clock-timer {
+    text-align: center;
+    color: aqua;
+}
+
+/* LINKS BUTTONS */
+
+.links-buttons {
+    display: inline-block;
+    text-align: center;
+    border-right: 0.2rem solid black;
+}
+
+#links-input {
+    margin: 5%;
+    border: none;
+    height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100%;
+}
+
+#links-add, #links-remove, #links-clear{
+    border-radius: 0;
+    border: none;
+    margin: 2.5% 1% 1% 1%;
+    height: 2rem;
+    width: 5rem;
+}
+
+#links-clear:hover {
+    background: aqua;
+    cursor: pointer;
+    color: black;
+    font-size: 100%;
+}
+
+#links-add:hover {
+    background: lawngreen;
+    cursor: pointer;
+    color: black;
+    font-size: 100%;
+}
+
+#links-remove:hover {
+    background: red;
+    cursor: pointer;
+    color: black;
+    font-size: 100%;
+}
+
+/* LINKS */
+
+.links {
+    display: grid;
+    text-transform: uppercase;
+}
+
+.links li {
+    display: grid;
+    margin: 1.5%;
+}
+
+.links li a { 
+    display: grid;
+}
+
+.links li a:hover {
+    color: lawngreen;
+    font-weight: bold;
+}
+
+/* FORGET ME NOT ********************************************************************************************* */
+
+.stage {
+    display: flex;
+    font-weight: bold;
+    margin: auto;
+}
+
+#fmn-stage {
+    color: lawngreen;
+}
+
+#fmn-stage-input {
+    height: 70%;
+    width: 98%;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+  
+#fmn-final-result {
+    height: 70%;
+    width: 98%;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: blue;
+    cursor: not-allowed;
+    margin: auto;
+}
+
+/* LEFT PANEL ************************************************************************************************ */
+
+.serial-number-div {
+    display: block;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#serial-number {
+    height: 80%;
+    width: 80%;
+    font-size: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.batteries {
+    font-size: 150%;
+    text-align: center;
+    color: white;
+}
+
+#batteries-input {
+    height: 80%;
+    width: 20%;
+    font-size: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.lits {
+    display: grid;
+}
+
+.lit-all {
+    font-size: 100%;
+    text-align: center;
+    color: white;
+    margin: 1%;
+}
+
+#lit-input {
+    height: 80%;
+    width: 80%;
+    font-size: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.unlit-all {
+    font-size: 100%;
+    text-align: center;
+    color: white;
+    margin: 1%;
+}
+
+#unlit-input {
+    height: 80%;
+    width: 80%;
+    font-size: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* PORTS BUTTONS */
+
+.port-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#add-port {
+    display: flex;
+    border-radius: 0;
+    border: 0;
+    height: 60%;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+#add-port:hover {
+    background-color: lawngreen;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    font-size: 150%;
+}
+
+#remove-port {
+    display: flex;
+    border-radius: 0;
+    border: 0;
+    height: 60%;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+#remove-port:hover {
+    background-color: red;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    font-size: 150%;
+}
+
+/* PORTS */
+
+.ports-selection {
+    display: grid;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    cursor: pointer;
+    color: white;
+    height: 60%;
+    width: 100%;
+    display: none;
+}
+
+.ports-selection div > * {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 15%;
+}
+
+/* MODULES ***************************************************************************************************** */
+
+#modules-input {
+    resize: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#modules-input-title {
+    resize: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border-color: rgb(41, 41, 41);;
+    font-size: 150%;
+}
+
+/* LARGE SCREENS - 1920x1080 ************************************************************** */
+
+/* MEDIUM SCREENS - 960x540 ******************************************************************** */
+
+/* SMALL SCREENS - 480x854 ****************************************************************** */

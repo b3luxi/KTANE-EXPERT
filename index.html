@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/img/ktaneTabIcon.png">
+    <title>KTANE</title>
+</head>
+<body>
+
+    <!-- HEADER AND NAV -->
+
+    <div class="header-container">
+
+        <img id="logo" src="/img/ktaneBanner.jpg" alt="KTANEimage">
+        <div class="buttons">
+            <button id="reset-button" onClick="newGame()" >RESET PAGE</button>
+            <button id="set-color-button">COLOR SET</button>
+            <button id="remove-color-button">COLOR REMOVE</button>
+            <button id="notes-add-button">NOTES ADD</button>
+            <button id="notes-remove-button">NOTES REMOVE</button>
+            <button id="set-clock-button">CLOCK SET</button>
+            <button id="start-clock-button">CLOCK START</button>
+        </div>
+        <div class="clock">
+            <h2 id="clock-timer">00:00:00</h2>
+        </div>
+        <div class="links-buttons">
+            <input id="links-input" type="text" placeholder="INSERT LINK NAME" oninput="this.value = this.value.toUpperCase()">
+            <button id="links-clear">CLEAR</button>
+            <button id="links-add">ADD</button>
+            <button id="links-remove">REMOVE</button>
+        </div>
+        <ul class="links">
+            <li><a id="links-manuals" href="https://ktane.timwi.de/" target="_blank">MANUALS</a></li>
+            <li><a id="links-fmn" href="https://ktane.timwi.de/HTML/Forget%20Me%20Not.html" target="_blank">FMN</a></li>
+            <li><a id="links-abc" href="https://www.google.com/search?channel=fs&client=ubuntu&q=alphabet+position+number" target="_blank">ABC</a></li>
+        </ul>
+
+    </div>
+
+    <!-- FORGET ME NOT -->
+
+    <div class="fmn-container">
+
+        <div class="stage">
+            <h2 id="fmn-stage-text">FMN STAGE -</h2>
+            <h2 id="fmn-stage">0</h2>
+        </div>
+            <input id="fmn-stage-input" type="text" placeholder="FMN STAGE NUMBERS"></input>
+            <input id="fmn-final-result" type="text" readonly placeholder="FINAL CODE WILL APPEAR HERE (NOT WRITABLE)"></input>
+
+    </div>
+
+    <!-- LEFT PANEL WITH ALL THE BOMB SETTINGS -->
+
+    <div class="bottom-container">
+
+        <div class="left-panel-container">
+
+            <div class="serial-number-div">
+                <input id="serial-number" type="text" placeholder="SERIAL NUMBER">
+            </div>
+
+            <div class="batteries">
+                <label id="batteries-text" for="batteries">BATTERIES</label>
+                <input id="batteries-input" type="text" placeholder="0/0">
+            </div>
+
+            <div class="lits">
+                <div class="lit-all">
+                    <label id="lit-text" for="lit">LIT</label>
+                    <input id="lit-input" type="text" id="litInputBox">
+                </div>
+                <div class="unlit-all">
+                    <label id="unlit-text" for="unlit">UNLIT</label>
+                    <input id="unlit-input" type="text" id="unlitInputBox">
+                </div>
+            </div>
+
+            <div class="port-buttons">
+                <button id="add-port">+</button>
+                <button id="remove-port">--</button>
+            </div>
+
+            <div class="ports-selection" id="ports ">
+                <div>
+                    <label><input type="checkbox" id="empty" class="ports-names">EMPTY</label>
+                </div> 
+                <div>
+                    <label><input type="checkbox" id="DVID" class="ports-names">DVI-D</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" id="Parallel" class="ports-names">Paralell</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" id="PS2" class="ports-names">PS/2</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" id="RJ45" class="ports-names">RJ-45</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" id="Serial" class="ports-names">Serial</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" id="StereoRCA" class="ports-names">St. RCA</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right-side-container">
+
+            <div id="modules-notes" class="modules-notes-class">
+                <textarea id="modules-input-title" rows="1" cols="90" placeholder="MODULE NAME"></textarea>
+                <textarea id="modules-input" rows="20" cols="90" placeholder="NOTES"></textarea>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script src="app.js"> </script>
+
+</body>
+</html>
